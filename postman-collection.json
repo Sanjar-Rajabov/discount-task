@@ -1,0 +1,289 @@
+{
+    "collection": {
+        "info": {
+            "_postman_id": "6e4469dd-c668-4b65-b602-b29fd03c67cc",
+            "name": "Discount",
+            "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+            "createdAt": "2026-02-08T10:32:13.000Z",
+            "updatedAt": "2026-02-08T10:35:33.000Z",
+            "lastUpdatedBy": "14228030",
+            "uid": "14228030-6e4469dd-c668-4b65-b602-b29fd03c67cc"
+        },
+        "item": [
+            {
+                "name": "Documents",
+                "item": [
+                    {
+                        "name": "Generate",
+                        "id": "e8765b12-b4b8-47c2-9330-a3f5845fbf06",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "POST",
+                            "header": [
+                                {
+                                    "key": "Accept",
+                                    "value": "application/json",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json",
+                                    "type": "text"
+                                }
+                            ],
+                            "body": {
+                                "mode": "raw",
+                                "raw": "{\n    \"client\": \"Sanjar\",\n    \"provider\": \"Google\",\n    \"date\": \"2026-12-12\"\n}",
+                                "options": {
+                                    "raw": {
+                                        "language": "json"
+                                    }
+                                }
+                            },
+                            "url": {
+                                "raw": "{{baseUrl}}/api/documents/generate",
+                                "host": [
+                                    "{{baseUrl}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "documents",
+                                    "generate"
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "7ab1efa8-d9c5-47d8-a47e-f43be8504521",
+                                "name": "Accepted",
+                                "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "body": {
+                                        "mode": "raw",
+                                        "raw": "{\n    \"client\": \"Sanjar\",\n    \"provider\": \"Google\",\n    \"date\": \"2026-12-12\"\n}",
+                                        "options": {
+                                            "raw": {
+                                                "language": "json"
+                                            }
+                                        }
+                                    },
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/documents/generate",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "documents",
+                                            "generate"
+                                        ]
+                                    }
+                                },
+                                "status": "Accepted",
+                                "code": 202,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "localhost:8080"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/8.3.29"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Sun, 08 Feb 2026 10:37:09 GMT"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"message\": \"Document generated successfully\",\n    \"document\": {\n        \"id\": 28,\n        \"path\": null,\n        \"status\": \"pending\",\n        \"comment\": null,\n        \"created_at\": \"2026-02-08T10:37:09.000000Z\",\n        \"updated_at\": \"2026-02-08T10:37:09.000000Z\"\n    }\n}",
+                                "createdAt": "2026-02-08T10:37:28.000Z",
+                                "updatedAt": "2026-02-08T10:37:32.000Z",
+                                "uid": "14228030-7ab1efa8-d9c5-47d8-a47e-f43be8504521"
+                            }
+                        ],
+                        "createdAt": "2026-02-08T10:35:08.000Z",
+                        "updatedAt": "2026-02-08T10:37:28.000Z",
+                        "uid": "14228030-e8765b12-b4b8-47c2-9330-a3f5845fbf06"
+                    },
+                    {
+                        "name": "Get One",
+                        "id": "140250bd-f51a-4233-8689-78bd2b175ae0",
+                        "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                        },
+                        "request": {
+                            "method": "GET",
+                            "header": [
+                                {
+                                    "key": "Accept",
+                                    "value": "application/json",
+                                    "type": "text"
+                                }
+                            ],
+                            "url": {
+                                "raw": "{{baseUrl}}/api/documents/:id",
+                                "host": [
+                                    "{{baseUrl}}"
+                                ],
+                                "path": [
+                                    "api",
+                                    "documents",
+                                    ":id"
+                                ],
+                                "variable": [
+                                    {
+                                        "key": "id",
+                                        "value": "36"
+                                    }
+                                ]
+                            }
+                        },
+                        "response": [
+                            {
+                                "id": "c4c4fcb2-06b4-430b-b7af-507bfb611050",
+                                "name": "Get One",
+                                "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                        {
+                                            "key": "Accept",
+                                            "value": "application/json",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "url": {
+                                        "raw": "{{baseUrl}}/api/documents/:id",
+                                        "host": [
+                                            "{{baseUrl}}"
+                                        ],
+                                        "path": [
+                                            "api",
+                                            "documents",
+                                            ":id"
+                                        ],
+                                        "variable": [
+                                            {
+                                                "key": "id",
+                                                "value": "28"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "status": "OK",
+                                "code": 200,
+                                "_postman_previewlanguage": "json",
+                                "header": [
+                                    {
+                                        "key": "Host",
+                                        "value": "localhost:8080"
+                                    },
+                                    {
+                                        "key": "Connection",
+                                        "value": "close"
+                                    },
+                                    {
+                                        "key": "X-Powered-By",
+                                        "value": "PHP/8.3.29"
+                                    },
+                                    {
+                                        "key": "Cache-Control",
+                                        "value": "no-cache, private"
+                                    },
+                                    {
+                                        "key": "Date",
+                                        "value": "Sun, 08 Feb 2026 10:41:06 GMT"
+                                    },
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Access-Control-Allow-Origin",
+                                        "value": "*"
+                                    }
+                                ],
+                                "cookie": [],
+                                "responseTime": null,
+                                "body": "{\n    \"document\": {\n        \"id\": 28,\n        \"path\": \"documents/agreement-28-sanjar-and-google-2026-12-12.pdf\",\n        \"status\": \"ready\",\n        \"comment\": null,\n        \"created_at\": \"2026-02-08T10:37:09.000000Z\",\n        \"updated_at\": \"2026-02-08T10:37:12.000000Z\",\n        \"url\": \"http://localhost:8080/storage/documents/agreement-28-sanjar-and-google-2026-12-12.pdf\"\n    }\n}",
+                                "createdAt": "2026-02-08T10:41:26.000Z",
+                                "updatedAt": "2026-02-08T10:47:28.000Z",
+                                "uid": "14228030-c4c4fcb2-06b4-430b-b7af-507bfb611050"
+                            }
+                        ],
+                        "createdAt": "2026-02-08T10:37:37.000Z",
+                        "updatedAt": "2026-02-08T10:47:16.000Z",
+                        "uid": "14228030-140250bd-f51a-4233-8689-78bd2b175ae0"
+                    }
+                ],
+                "id": "fa7e40d9-7910-42e6-9ffe-348c41bd1df3",
+                "createdAt": "2026-02-08T10:35:06.000Z",
+                "updatedAt": "2026-02-08T10:37:37.000Z",
+                "uid": "14228030-fa7e40d9-7910-42e6-9ffe-348c41bd1df3"
+            }
+        ],
+        "event": [
+            {
+                "listen": "prerequest",
+                "script": {
+                    "id": "aa50ab6f-85de-4f11-9ad9-555b629ef270",
+                    "type": "text/javascript",
+                    "packages": {},
+                    "exec": [
+                        ""
+                    ]
+                }
+            },
+            {
+                "listen": "test",
+                "script": {
+                    "id": "dc971a0e-c301-4b64-930f-e1a22f7689f5",
+                    "type": "text/javascript",
+                    "packages": {},
+                    "exec": [
+                        ""
+                    ]
+                }
+            }
+        ],
+        "variable": [
+            {
+                "key": "baseUrl",
+                "value": "http://localhost:8080",
+                "type": "string"
+            }
+        ]
+    }
+}
