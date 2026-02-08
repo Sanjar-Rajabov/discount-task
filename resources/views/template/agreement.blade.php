@@ -16,7 +16,7 @@
 <h1 class="center">Header of the agreement</h1>
 <hr>
 <h3 class="center">Subtitle of the agreement</h3>
-<div>This is the agreement between {{ $data->client  }} and {{ $data->provider }}.
+<div>This is the agreement between <strong>{{ $data->client  }}</strong> and <strong>{{ $data->provider }}</strong>.
     This Agreement sets out the terms and conditions upon which <strong>the provider</strong> agrees to provide the
     services to <strong>the client</strong>.
     The Agreement constitutes the entire agreement between the parties and supersedes all prior understandings,
@@ -54,7 +54,7 @@
 </ul>
 <h3 class="center">Footer of the agreement</h3>
 <footer>
-    <p>Date: {{ $data->date }}<br>
+    <p>Date: {{ $data->date->format('Y-m-d') }}<br>
         Signed for and on behalf of:<br>
         {{ $data->client }} (Client)<br>
         {{ $data->provider }} (Provider)
