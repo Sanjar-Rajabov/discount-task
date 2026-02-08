@@ -48,6 +48,9 @@ services:
       - app
     networks:
       - discount
+    command: >
+      sh -c "ln -sf /var/www/html/storage/app/public /var/www/html/public/storage &&
+             nginx -g 'daemon off;'"
 
 volumes:
   pgdata:
